@@ -1,0 +1,29 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 150px;
+    height: 30px;
+    padding: 0;
+  
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+  
+    background-color: #1472ff;
+    color: #000000;
+
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    color: #fffcfc;
+  }

@@ -1,0 +1,39 @@
+.item {
+    width: 380px;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform var(--hover-animation);
+  }
+  
+  .item:hover,
+  .item:focus {
+    transform: scale(1.03);
+    cursor: zoom-in;
+  }
+  
+  .item:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .item {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      
+      width: calc((100% - 2 * 15px) / 3);
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    .item {
+      width: calc((100% - 3 * 15px) / 4);
+    }
+  }

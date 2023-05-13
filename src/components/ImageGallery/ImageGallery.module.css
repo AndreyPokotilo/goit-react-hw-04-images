@@ -1,0 +1,24 @@
+.listGalery {
+  width: 300px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+
+  }
+  
+  @media screen and (min-width: 768px) {
+    .listGalery {
+      
+      width: 768px;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    .listGalery {
+      width: 100%;
+    }
+  }
