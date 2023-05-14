@@ -22,17 +22,19 @@ export function App() {
       return;
     }
     setIsLoader(true);
-    (async function fetchData() {
+    async function fetchData() {
       try {
         const imgArray = await fetchImg(query, page);
         setImages(prevImages => [...prevImages, ...imgArray.hits]);
         setTotalImg(imgArray.totalHits);
-        setIsLoader(false);
       } catch (error) {
-        setIsLoader(false);
         setErrorMessage(error.message);
       }
-    })();
+      finally{
+        setIsLoader(false);
+      }
+    }
+    fetchData()
   }, [query, page]);
 
   const onIncrement = () => {
